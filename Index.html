@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevX — Roblox Game Developer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       CUSTOM CURSOR
+  ══════════════════════════════════════ -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-logo">Pae<span style="color:var(--neon-purple)">Games</span></div>
+    <div class="loader-bar-track"><div class="loader-bar"></div></div>
+    <div class="loader-text">กำลังโหลด...</div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       PARTICLE CANVAS
+  ══════════════════════════════════════ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo">Pae<span>Games</span></div>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-status">
+      <div class="status-dot"></div>
+      Available for work
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-badge">⚡ Sumet Saeteng</div>
+
+    <h1 class="hero-title">
+      <span class="line1">Roblox</span>
+      <span class="line2">Game Developer</span>
+    </h1>
+
+    <p class="hero-sub">
+      Experienced Full-Stack Developer (7+ years) skilled in UI/UX design, scripting, 3D modeling, and mentoring.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">⚡ View My Projects</a>
+      <a href="#contact"  class="btn-ghost">Get In Touch →</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-count="3">0</div>
+        <div class="hero-stat-label">Projects</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-count="3.5" data-suffix="M+">0</div>
+        <div class="hero-stat-label">Total Visits</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-count="7" data-suffix="yrs">0</div>
+        <div class="hero-stat-label">Experience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-count="99" data-suffix="%">0</div>
+        <div class="hero-stat-label">Passion</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <div class="gradient-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       FEATURED PROJECTS
+  ══════════════════════════════════════ -->
+  <section class="featured-section" id="featured">
+    <div class="section-container">
+
+      <div class="section-header fade-in-up">
+        <div class="section-tag">✦ Highlight Reel</div>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="section-subtitle">My best work — games and systems built with passion and precision.</p>
+      </div>
+
+      <div class="featured-grid">
+
+        <!-- Card 1 -->
+        <div class="featured-card fade-in-up" onclick="openModal('nexus')">
+          <div class="card-thumb">
+            <div class="card-thumb-bg" style="background:linear-gradient(135deg,#0f172a,#1e3a5f)"><img src="img/NangRam.png"></div>
+            <div class="card-thumb-overlay"></div>
+            <div class="card-badge">🔥 Top Rated</div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-blue">Game</span>
+              <span class="tag tag-purple">System</span>
+              <span class="tag tag-green">AI</span>
+              <span class="tag tag-green">Horror</span>
+            </div>
+            <div class="card-title">นางรํา NangRam</div>
+            <p class="card-desc">This is my most successful horror game.</p>
+            <div class="card-stats">
+              <div class="stat-item">
+                <span class="stat-icon">👁️</span>
+                <div><div class="stat-value">3M</div><div class="stat-label">Visits</div></div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">❤️</span>
+                <div><div class="stat-value">1k</div><div class="stat-label">Likes</div></div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">🟢</span>
+                <div><div class="stat-value">300</div><div class="stat-label">Active</div></div>
+              </div>
+            </div>
+            <button class="card-cta">View Details →</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="featured-card fade-in-up" onclick="openModal('stellar')" style="transition-delay:.1s">
+          <div class="card-thumb">
+            <div class="card-thumb-bg" style="background:linear-gradient(135deg,#1a0f2e,#2d1b69)"><img src="img/AksornThai.png"></div>
+            <div class="card-thumb-overlay"></div>
+            <div class="card-badge">🌟 Editor's Pick</div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-purple">UI/UX</span>
+              <span class="tag tag-pink">Plugin</span>
+            </div>
+            <div class="card-title">AksornThai</div>
+            <p class="card-desc">This is a plugin for creating 3D Thai text in Roblox!</p>
+            <div class="card-stats">
+              <div class="stat-item">
+                <span class="stat-icon">📦</span>
+                <div><div class="stat-value">10.2K</div><div class="stat-label">Downloads</div></div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">⭐</span>
+                <div><div class="stat-value">4.3</div><div class="stat-label">Rating</div></div>
+              </div>
+            </div>
+            <button class="card-cta">View Details →</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="featured-card fade-in-up" onclick="openModal('dungeon')" style="transition-delay:.2s">
+          <div class="card-thumb">
+            <div class="card-thumb-bg" style="background:linear-gradient(135deg,#0d1f0d,#1a4a1a)"><img src="img/BEGOD.png"></div>
+            <div class="card-thumb-overlay"></div>
+            <div class="card-badge">🆕 New</div>
+          </div>
+          <div class="card-body">
+            <div class="card-tags">
+              <span class="tag tag-green">Simulator</span>
+              <span class="tag tag-blue">System</span>
+              <span class="tag tag-green">TeamWork</span>
+            </div>
+            <div class="card-title">BE GOD</div>
+            <p class="card-desc">This is the latest game project we submitted as a team.</p>
+            <button class="card-cta">View Details →</button>
+          </div>
+        </div>
+
+      </div><!-- /featured-grid -->
+    </div>
+  </section>
+
+  <div class="gradient-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS GRID
+  ══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-container">
+
+      <div class="section-header fade-in-up">
+        <div class="section-tag">✦ All Work</div>
+        <h2 class="section-title">Project <span>Gallery</span></h2>
+        <p class="section-subtitle">A collection of games, systems, UI components, and plugins.</p>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="filter-bar fade-in-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="game">🎮 Games</button>
+        <button class="filter-btn" data-filter="system">⚙️ Systems</button>
+        <button class="filter-btn" data-filter="ui">🎨 UI/UX</button>
+        <button class="filter-btn" data-filter="plugin">🔌 Plugins</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card fade-in-up" data-category="game" onclick="openModal('nexus')">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0f172a,#1e3a5f)"><img src="img/NangRam.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">นางรํา NangRam</div>
+            <p class="project-desc">This is my most successful horror game.</p>
+            <div class="project-metrics">
+              <div class="metric">👁️ <span>3M</span></div>
+              <div class="metric">❤️ <span>1K</span></div>
+              <div class="metric">⭐ <span>19k</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="plugin" onclick="openModal('stellar')" style="transition-delay:.05s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1a0f2e,#2d1b69)"><img src="img/AksornThai.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">AksornThai</div>
+            <p class="project-desc">This is a plugin for creating 3D Thai text in Roblox!</p>
+            <div class="project-metrics">
+              <div class="metric">📦 <span>10.2K</span></div>
+              <div class="metric">⭐ <span>4.3</span></div>
+            </div>
+            <div class="tech-tags">
+              <span class="tag tag-purple">Tween</span>
+              <span class="tag tag-pink">UI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="game" onclick="openModal('dungeon')" style="transition-delay:.1s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0d1f0d,#1a4a1a)"><img src="img/BEGOD.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Weather God Simulator</div>
+            <p class="project-desc">This is the latest game project we submitted as a team.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Advanced</span>
+              <span class="tag tag-blue">TeamWork</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="game" onclick="openModal('Mononoke')" style="transition-delay:.1s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#0d1f0d,#1a4a1a)"><img src="img/Mononoke.webp"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Riase a Mononoke</div>
+            <p class="project-desc">This Game Is FanMade of Channel Thanks For Watching</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">FanMade</span>
+              <span class="tag tag-blue">Simulator</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Spotify')" style="transition-delay:.15s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Spotify.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Spotify System</div>
+            <p class="project-desc">A music streaming system with playlist management and synchronized playback for multiplayer experiences.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Remote</span>
+              <span class="tag tag-pink">MultiPlayer</span>
+              <span class="tag tag-purple">Advanced</span>
+              <span class="tag tag-blue">ParicleEffect</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Karaoke')" style="transition-delay:.2s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Karaoke.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Karaoke System</div>
+            <p class="project-desc">A karaoke system with real-time lyrics sync and word highlighting for interactive singing.</p>
+            <div class="tech-tags">
+              <span class="tag tag-blue">Lyrics System</span>
+              <span class="tag tag-purple">Timeline Sync</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('MapGenerate')" style="transition-delay:.2s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/MapGenerate.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Map Generate System</div>
+            <p class="project-desc">Procedural map generation system that creates dynamic and replayable environments.</p>
+            <div class="tech-tags">
+              <span class="tag tag-blue">Map</span>
+              <span class="tag tag-purple">Advanced</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('AI')" style="transition-delay:.2s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/AI.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">AI</div>
+            <p class="project-desc">Advanced AI system with behavior logic and decision-making for NPC interactions.</p>
+            <div class="tech-tags">
+              <span class="tag tag-blue">AI</span>
+              <span class="tag tag-purple">Advanced</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Global')" style="transition-delay:.25s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Global.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Global Market</div>
+            <p class="project-desc">A global trading system allowing players to buy and sell items across servers.</p>
+            <div class="tech-tags">
+              <span class="tag tag-pink">Market System</span>
+              <span class="tag tag-blue">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Refuel')" style="transition-delay:.25s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Refuel.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Refuel System</div>
+            <p class="project-desc">Fuel management system for vehicles with realistic refueling mechanics.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Market System</span>
+              <span class="tag tag-purple">Car System</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Garage')" style="transition-delay:.3s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Garage.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Garage System</div>
+            <p class="project-desc">Vehicle storage and management system with UI for selecting and customizing cars.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Garage System</span>
+              <span class="tag tag-purple">Car System</span>
+              <span class="tag tag-pink">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Inventory')" style="transition-delay:.35s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Inventory.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Inventory System</div>
+            <p class="project-desc">Flexible inventory system with item management, stacking, and UI support.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Inventory System</span>
+              <span class="tag tag-pink">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('SpawnCar')" style="transition-delay:.4s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/SpawnCar.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">SpawnCar System</div>
+            <p class="project-desc">Vehicle spawning system with selection UI and server-side validation.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">SpawnCar System</span>
+              <span class="tag tag-pink">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Steal')" style="transition-delay:.45s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Steal.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Steal System</div>
+            <p class="project-desc">Interactive stealing system using proximity prompts and multiplayer sync.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Steal System</span>
+              <span class="tag tag-pink">ProximityPrompt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Dash')" style="transition-delay:.5s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Dash.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Dash System</div>
+            <p class="project-desc">Player dash mechanic with smooth animations and responsive input handling.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Dash System</span>
+              <span class="tag tag-pink">PlayerInput</span>
+              <span class="tag tag-blue">Animation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Camera')" style="transition-delay:.55s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Camera.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Camera Angle Swip</div>
+            <p class="project-desc">Dynamic camera angle switching system for enhanced player perspective.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Camera Angle</span>
+              <span class="tag tag-pink">PlayerInput</span>
+              <span class="tag tag-blue">Camera</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Quiz')" style="transition-delay:.6s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Quiz.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Auto Generate Quiz</div>
+            <p class="project-desc">Automatic quiz generation system with modular question management.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">System</span>
+              <span class="tag tag-pink">Module</span>
+              <span class="tag tag-blue">Question</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('PaPang')" style="transition-delay:.65s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/PaPang.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">ปะแป้ง</div>
+            <p class="project-desc">Multiplayer interaction system with fun animations inspired by Thai festival gameplay.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Remote</span>
+              <span class="tag tag-pink">MultiPlayer</span>
+              <span class="tag tag-blue">Animation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('WaterGun')" style="transition-delay:.7s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/WaterGun.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">WaterGun</div>
+            <p class="project-desc">Water gun system with shooting mechanics, particle effects, and multiplayer sync.</p>
+            <div class="tech-tags">
+              <span class="tag tag-green">Remote</span>
+              <span class="tag tag-pink">MultiPlayer</span>
+              <span class="tag tag-blue">ParicleEffect</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="ui" onclick="openModal('Notify')" style="transition-delay:.75s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Notify.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Notify System</div>
+            <p class="project-desc">Custom notification UI system with animations and flexible message handling.</p>
+            <div class="tech-tags">
+              <span class="tag tag-pink">Notify System</span>
+              <span class="tag tag-blue">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="game" onclick="openModal('TowerDefense')" style="transition-delay:.8s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/TowerDefense.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Tower Defense</div>
+            <p class="project-desc">A tower defense game system with strategic gameplay mechanics.</p>
+            <div class="tech-tags">
+              <span class="tag tag-pink">TowerDefense</span>
+              <span class="tag tag-purple">Game System</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="ui" onclick="openModal('Achievement')" style="transition-delay:.85s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Achievement.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Achievement</div>
+            <p class="project-desc">An achievement tracking system with UI feedback.</p>
+            <div class="tech-tags">
+              <span class="tag tag-blue">UI/UX</span>
+              <span class="tag tag-green">System</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="ui" onclick="openModal('UIUX')" style="transition-delay:.9s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/UIUX.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">UI/UX</div>
+            <p class="project-desc">Add Animation For UI/UX.</p>
+            <div class="tech-tags">
+              <span class="tag tag-blue">UI/UX</span>
+              <span class="tag tag-green">Animate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card fade-in-up" data-category="system" onclick="openModal('Zombie')" style="transition-delay:.95s">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background:linear-gradient(135deg,#1f1507,#4a3001)"><img src="img/Zombie.png"></div>
+            <div class="project-thumb-overlay"></div>
+            <div class="play-overlay">▶</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Zombie</div>
+            <p class="project-desc">Creating AI zombies using various State Machine Events at an advanced level.</p>
+            <div class="tech-tags">
+              <span class="tag tag-blue">Character</span>
+              <span class="tag tag-green">Zombie</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <div class="gradient-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section class="skills-section" id="skills">
+    <div class="section-container">
+
+      <div class="section-header fade-in-up">
+        <div class="section-tag">✦ Expertise</div>
+        <h2 class="section-title">Skills &amp; <span>Tech Stack</span></h2>
+        <p class="section-subtitle">Years of hands-on experience building real Roblox projects.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-item fade-in-up">
+          <div class="skill-header">
+            <div class="skill-info">
+              <span class="skill-icon">🖥️</span>
+              <div>
+                <div class="skill-name">Lua / Luau Programming</div>
+                <div class="skill-level">Advanced</div>
+              </div>
+            </div>
+            <div class="skill-percent">95%</div>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="95"></div></div>
+        </div>
+
+        <div class="skill-item fade-in-up" style="transition-delay:.05s">
+          <div class="skill-header">
+            <div class="skill-info">
+              <span class="skill-icon">🎮</span>
+              <div>
+                <div class="skill-name">Game Design</div>
+                <div class="skill-level">Advanced</div>
+              </div>
+            </div>
+            <div class="skill-percent">90%</div>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar" data-width="90" style="background:linear-gradient(90deg,#a78bfa,#f472b6)"></div>
+          </div>
+        </div>
+
+        <div class="skill-item fade-in-up" style="transition-delay:.1s">
+          <div class="skill-header">
+            <div class="skill-info">
+              <span class="skill-icon">🎨</span>
+              <div>
+                <div class="skill-name">UI/UX Design</div>
+                <div class="skill-level">Proficient</div>
+              </div>
+            </div>
+            <div class="skill-percent">85%</div>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar" data-width="85" style="background:linear-gradient(90deg,#f472b6,#a78bfa)"></div>
+          </div>
+        </div>
+
+        <div class="skill-item fade-in-up" style="transition-delay:.15s">
+          <div class="skill-header">
+            <div class="skill-info">
+              <span class="skill-icon">⚙️</span>
+              <div>
+                <div class="skill-name">System Design &amp; OOP</div>
+                <div class="skill-level">Advanced</div>
+              </div>
+            </div>
+            <div class="skill-percent">92%</div>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar" data-width="92" style="background:linear-gradient(90deg,#34d399,#38bdf8)"></div>
+          </div>
+        </div>
+
+        <div class="skill-item fade-in-up" style="transition-delay:.2s">
+          <div class="skill-header">
+            <div class="skill-info">
+              <span class="skill-icon">🤖</span>
+              <div>
+                <div class="skill-name">AI &amp; Logic Systems</div>
+                <div class="skill-level">Intermediate</div>
+              </div>
+            </div>
+            <div class="skill-percent">75%</div>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar" data-width="75" style="background:linear-gradient(90deg,#fbbf24,#f472b6)"></div>
+          </div>
+        </div>
+
+        <div class="skill-item fade-in-up" style="transition-delay:.25s">
+          <div class="skill-header">
+            <div class="skill-info">
+              <span class="skill-icon">💾</span>
+              <div>
+                <div class="skill-name">DataStore &amp; Persistence</div>
+                <div class="skill-level">Advanced</div>
+              </div>
+            </div>
+            <div class="skill-percent">88%</div>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="88"></div></div>
+        </div>
+
+      </div><!-- /skills-grid -->
+    </div>
+  </section>
+
+  <div class="gradient-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-container">
+      <div class="about-inner">
+
+        <div class="about-avatar-wrap fade-in-up">
+          <div class="about-avatar-ring2"></div>
+          <div class="about-avatar-ring"></div>
+          <div class="about-avatar"><img src="img/Character.webp"></div>
+        </div>
+
+        <div class="fade-in-up">
+  <div class="about-tag">✦ About Me</div>
+  <h2 class="about-title">Passionate Roblox Developer<br>&amp; Game Architect</h2>
+
+  <p class="about-text">
+    I'm an 18-year-old Roblox game developer with over 7 years of hands-on experience creating
+    games, systems, and interactive experiences. I have successfully led projects that reached
+    more than 3,000,000 total plays, demonstrating both technical skill and player-focused design.
+  </p>
+
+  <p class="about-text">
+    I specialize in building scalable systems using Luau, applying OOP principles, modular
+    architecture, and performance optimization to deliver polished and professional gameplay.
+    My work ranges from UI/UX systems to complex game mechanics and backend logic.
+  </p>
+
+  <p class="about-text">
+    In addition to development, I work as an independent Roblox Studio tutor, teaching students
+    scripting, game design, and publishing. I have also led workshops aimed at inspiring the next
+    generation of game developers.
+  </p>
+
+  <p class="about-text">
+    My goal is to become a professional game engineer and expand my skills into broader areas
+    of the game development industry.
+  </p>
+
+  <div class="about-badges">
+    <span class="about-badge">🎯 Roblox Studio</span>
+    <span class="about-badge">⚙️ Luau / OOP</span>
+    <span class="about-badge">🗃️ DataStore</span>
+    <span class="about-badge">🎬 TweenService</span>
+    <span class="about-badge">🤖 Pathfinding</span>
+    <span class="about-badge">🔧 Remote Events</span>
+    <span class="about-badge">📦 Module Scripts</span>
+    <span class="about-badge">👨‍🏫 Teaching</span>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="gradient-divider"></div>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section class="contact-section" id="contact">
+    <div class="section-container">
+      <div class="contact-inner">
+
+        <div class="section-header fade-in-up" style="margin-bottom:0">
+          <div class="section-tag">✦ Get In Touch</div>
+          <h2 class="section-title">Let's <span>Connect</span></h2>
+        </div>
+
+        <p class="contact-cta-text fade-in-up">
+          Open to collaborations, commissions, and freelance projects.
+          Whether you need a full game or a specific system — let's build something great.
+        </p>
+
+        <div class="contact-cards fade-in-up">
+          <a href="https://discord.gg/fNSc8HSvBZ" target="_blank" class="contact-card discord">
+            <div class="contact-icon"><img src="img/Discord.png"></div>
+            <div class="contact-label">Discord</div>
+            <div class="contact-handle">paxs_pae</div>
+          </a>
+          <a href="https://www.facebook.com/joy.vipada.5" target="_blank" class="contact-card github">
+            <div class="contact-icon"><img src="img/Facebook.png"></div>
+            <div class="contact-label">Facebook</div>
+            <div class="contact-handle">Sumet Saeteng</div>
+          </a>
+          <a href="https://www.roblox.com/users/1035920800/profile" target="_blank" class="contact-card roblox">
+            <div class="contact-icon"><img src="img/Roblox.png"></div>
+            <div class="contact-label">Roblox</div>
+            <div class="contact-handle">@Paxumet</div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo">DEV<span style="color:var(--neon-purple)">Pae</span></div>
+    <div class="footer-copy">© 2025 DevX — Roblox Game Developer. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       MODAL
+  ══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+    <div class="modal" id="modal">
+      <button
+        class="modal-close"
+        onclick="closeModal()"
+        style="position:sticky;top:16px;float:right;z-index:10;margin-bottom:-36px"
+      >✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="Script.js"></script>
+</body>
+</html>
