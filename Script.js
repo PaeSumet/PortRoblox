@@ -310,7 +310,7 @@ const modalData = {
     tech: ['Lua', 'UI/UX', 'TweenService', 'RemoteEvents', 'TimeTick', 'ConnectOtherServer'],
   },
 
-  Refuel: {
+  Garage: {
     video: 'img/Garage.mp4',
     bg:    'linear-gradient(135deg,#0d1f0d,#1a4a1a)',
     title: 'Garage System',
@@ -322,6 +322,20 @@ const modalData = {
     desc: 'Vehicle storage and management system with UI for selecting and customizing cars.',
     features: [],
     tech: ['Lua', 'UI/UX', 'RemoteEvents', 'Car'],
+  },
+
+  Refuel: {
+    video: 'img/Refuel.mp4',
+    bg:    'linear-gradient(135deg,#0d1f0d,#1a4a1a)',
+    title: 'Refuel System',
+    tags:  [
+      { text: 'System',    cls: 'tag-green'   },
+      { text: 'Refuel',  cls: 'tag-purple' },
+      { text: 'Car',  cls: 'tag-pink' },
+    ],
+    desc: 'Fuel management system for vehicles with realistic refueling mechanics.',
+    features: [],
+    tech: ['Lua', 'ProximityPrompt', 'RemoteEvents', 'Car'],
   },
 
   Inventory: {
