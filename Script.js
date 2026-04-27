@@ -528,6 +528,20 @@ const modalData = {
     features: [],
     tech: ['Lua', 'PathFinding', 'RunService', 'StateMachine' ,'Module','OOP'],
   },
+
+  SelectTeam: {
+    video: 'img/SelectTeam.mp4',
+    bg:    'linear-gradient(135deg,#0d1f0d,#1a4a1a)',
+    title: 'SelectTeam',
+    tags:  [
+      { text: 'MulitiPlayer',    cls: 'tag-green'   },
+      { text: 'SelectTeam',  cls: 'tag-blue' },
+      { text: 'Teleport',  cls: 'tag-purple' },
+    ],
+    desc: 'This is Select Team System For Teleporting.',
+    features: [],
+    tech: ['Lua', 'SelectTeam', 'UIUX', 'TeleportService' ,'Remote','MulitiPlayer'],
+  },
 };
 
 /* ── Open modal ── */
